@@ -64,3 +64,5 @@ group :development do
   # gem "spring"
 end
 
+# Bootstrap framework in Sass
+gem 'bootstrap-sass', '3.4.1'

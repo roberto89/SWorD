@@ -1,0 +1,15 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "SWorD", "#", id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <% #link_to is the Rails helper to create links (it generates <a...> tags) %>
+          <li><%=link_to "Home",    root_path%></li>
+          <li><%=link_to "Faq",     faq_path%></li>
+          <li><%=link_to "SignUp",     signup_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

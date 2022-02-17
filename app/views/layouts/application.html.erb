@@ -6,11 +6,31 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_importmap_tags %>
+    <%= render 'layouts/shim'%>
   </head>
 
   <body>
-    <%= yield %>
+    <% # partial for the header %>
+    <%= render 'layouts/header' %>
+
+    <div class="container">
+
+      </br>
+      </br>
+      </br>
+
+      <%= yield %>
+
+      <% # partial for the footer %>
+      <%= render 'layouts/footer' %>
+
+      </br>
+      </br>
+
+      <% # show debug info if development is the actve Rails env %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
